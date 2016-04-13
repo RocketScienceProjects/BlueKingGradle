@@ -63,42 +63,42 @@
 		<pluginRepository>
 			<id>rocketscience-releases</id>
 			<name>Local nexus server plugin</name>
-			<url>http://ec2-54-201-191-217.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
+			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 			<layout>default</layout>
 		</pluginRepository>
 		<pluginRepository>
 			<id>rocketscience-snapshots</id>
 			<name>Internal Nexus snapshot Server</name>
-			<url>http://ec2-54-201-191-217.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
+			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 			<layout>default</layout>
 		</pluginRepository>
 	</pluginRepositories>
 	<distributionManagement>
 		<snapshotRepository>
 			<id>rocketscience-snapshots</id>
-			<url>http://ec2-54-201-191-217.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
+			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
 			<id>rocketscience-releases</id>
-			<url>http://ec2-54-201-191-217.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases</url>
+			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>
 	<repositories>
 		<repository>
 			<id>rocketscience-nexus</id>
 			<name>Internal Nexus Server</name>
-			<url>http://ec2-54-201-191-217.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
+			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 		</repository>
 		<repository>
 			<id>rocketscience-snapshots</id>
 			<name>Internal 
 		Nexus snapshot Server</name>
-			<url>http://ec2-54-201-191-217.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
+			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 		</repository>
 		<repository>
 			<id>rocketscience-releases</id>
 			<name>Internal Nexus Releases Server</name>
-			<url>http://ec2-54-201-191-217.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases</url>
+			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
