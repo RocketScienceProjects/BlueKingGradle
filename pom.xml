@@ -64,6 +64,7 @@
 		<connection>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</connection>
 		<developerConnection>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</developerConnection>
 		<url>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</url>
+		<tag>blueking-parent-0.0.1</tag>
 	</scm>
 
 	<pluginRepositories>
