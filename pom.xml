@@ -59,15 +59,23 @@
 			</plugin>
 		</plugins>
 	</build>
+
+    <scm>
+		<connection>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</connection>
+		<developerConnection>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</developerConnection>
+		<url>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</url>
+		<tag>blueking-parent-15.01.2</tag>
+	</scm>
+
 	<pluginRepositories>
 		<pluginRepository>
-			<id>rocketscience-releases</id>
+			<id>ink-releases</id>
 			<name>Local nexus server plugin</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 			<layout>default</layout>
 		</pluginRepository>
 		<pluginRepository>
-			<id>rocketscience-snapshots</id>
+			<id>ink-snapshots</id>
 			<name>Internal Nexus snapshot Server</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 			<layout>default</layout>
@@ -75,17 +83,17 @@
 	</pluginRepositories>
 	<distributionManagement>
 		<snapshotRepository>
-			<id>rocketscience-snapshots</id>
+			<id>ink-snapshots</id>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
-			<id>rocketscience-releases</id>
+			<id>ink-releases</id>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>
 	<repositories>
 		<repository>
-			<id>rocketscience-nexus</id>
+			<id>ink-releases</id>
 			<name>Internal Nexus Server</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 		</repository>
