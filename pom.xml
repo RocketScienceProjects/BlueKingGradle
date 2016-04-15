@@ -93,7 +93,7 @@
 	</distributionManagement>
 	<repositories>
 		<repository>
-			<id>ink-releases</id>
+			<id>ink-nexus</id>
 			<name>Internal Nexus Server</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 		</repository>
