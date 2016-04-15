@@ -96,7 +96,7 @@
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 		</repository>
 		<repository>
-			<id>ink-snapshots</id>
+			<id>ink-releases</id>
 			<name>Internal Nexus Releases Server</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases</url>
 			<releases>
