@@ -19,7 +19,7 @@ public class BluekingHelloWorld {
 	public ModelAndView helloWorld() {
  
 		String message = "<br><div style='text-align:center;'>"
-				+ "<h3> Hello World, © Rocket Science Projects!!!</h3></div><br><br>";
+				+ "<h3> Hello World,Rocket Science Projects!!!</h3></div><br><br>";
 		return new ModelAndView("welcome", "message", message);
 	}
 }
