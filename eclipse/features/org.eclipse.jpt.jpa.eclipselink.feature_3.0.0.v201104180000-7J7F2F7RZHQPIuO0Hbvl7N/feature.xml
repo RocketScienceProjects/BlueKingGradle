@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.jpt.jpa.eclipselink.feature"
+      label="%featureName"
+      version="3.0.0.v201104180000-7J7F2F7RZHQPIuO0Hbvl7N"
+      provider-name="%providerName"
+      plugin="org.eclipse.jpt.jpa.eclipselink.branding"
+      
+      >
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.jpt.jpa.feature" version="3.0.0"/>
+      <import feature="org.eclipse.jpt.common.eclipselink.feature" version="1.0.0"/>
+   </requires>
+
+	<plugin
+         id="javax.persistence"
+         version="2.0.3.v201010191057"
+         unpack="false"/>
+
+	<plugin
+         id="org.eclipse.persistence.antlr"
+         version="2.3.0.v20110604-r9504"
+         unpack="false"/>
+
+	<plugin
+         id="org.eclipse.persistence.asm"
+         version="2.3.0.v20110604-r9504"
+         unpack="false"/>
+
+	<plugin
+         id="org.eclipse.persistence.core"
+         version="2.3.0.v20110604-r9504"
+         unpack="false"/>
+
+	<plugin
+         id="org.eclipse.persistence.jpa"
+         version="2.3.0.v20110604-r9504"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.jpa.eclipselink.core"
+         download-size="0"
+         install-size="0"
+         version="2.0.0.v201105250000"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.jpa.eclipselink.ui"
+         download-size="0"
+         install-size="0"
+         version="2.0.0.v201104270001"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.jpa.eclipselink.core.ddlgen"
+         download-size="0"
+         install-size="0"
+         version="2.0.0.v201104190000"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.jpa.eclipselink.branding"
+         download-size="0"
+         install-size="0"
+         version="2.4.0.v201103020003"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.jpt.jaxb.eclipselink.feature"
+      label="%featureName"
+      version="1.0.0.v201104110000-774-BgJ9EE9WCW8z0IE15"
+      provider-name="%providerName"
+      plugin="org.eclipse.jpt.jaxb.eclipselink.branding"
+      
+      >
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.jpt.jaxb.feature" version="1.0.0"/>
+      <import feature="org.eclipse.jpt.common.eclipselink.feature" version="1.0.0"/>
+   </requires>
+
+	<plugin
+         id="org.eclipse.persistence.moxy"
+         version="2.3.0.v20110604-r9504"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.jaxb.eclipselink.core"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.v201105180000"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.jaxb.eclipselink.ui"
+         download-size="0"
+         install-size="0"
+         version="1.1.0.v201105110000"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.jaxb.eclipselink.core.schemagen"
+         download-size="0"
+         install-size="0"
+         version="1.1.0.v201104120000"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.jaxb.eclipselink.branding"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.v201103080000"
+         unpack="false"/>
+
+</feature>
