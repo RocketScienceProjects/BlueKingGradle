@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (c) 2005, 2011 IBM Corporation and others.
+     All rights reserved. This program and the accompanying materials
+     are made available under the terms of the Eclipse Public License v1.0
+     which accompanies this distribution, and is available at
+     http://www.eclipse.org/legal/epl-v10.html
+    
+     Contributors:
+         IBM Corporation - initial API and implementation
+ -->
+<feature
+      id="org.eclipse.rse"
+      label="%featureName"
+      version="3.3.0.v201106081330-7L7CFGB8wqio7ppp-b5xx29Eb0hQ"
+      provider-name="%providerName"
+      plugin="org.eclipse.rse"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%tmUpdateSiteName" url="http://download.eclipse.org/tm/updates/3.3"/>
+      <discovery label="%tmUpdateSiteName" url="http://download.eclipse.org/tm/updates/3.3"/>
+   </url>
+
+   <includes
+         id="org.eclipse.rse.core"
+         version="3.3.0.v201106011538-7a7JFYwFC7sReeS7d5k9KA"
+         search-location="both"/>
+
+   <includes
+         id="org.eclipse.rse.dstore"
+         version="3.3.0.v201106011538-7L78FR7EVVFNNFaMdQf_h"
+         search-location="both"/>
+
+   <includes
+         id="org.eclipse.rse.ftp"
+         version="3.0.300.v201106011538-782F8N9oB588587HAFII"
+         search-location="both"/>
+
+   <includes
+         id="org.eclipse.rse.local"
+         version="2.1.300.v201103142315-7B4FKsBgJ9EE9ICQIFYT"
+         search-location="both"/>
+
+   <includes
+         id="org.eclipse.rse.ssh"
+         version="3.0.300.v201106011538-7A3F9wAkF7BB7FAKECRM"
+         search-location="both"/>
+
+   <includes
+         id="org.eclipse.rse.telnet"
+         version="2.2.200.v201106011538-775F8NAkF7BB7B9NEIPP"
+         search-location="both"/>
+
+   <includes
+         id="org.eclipse.rse.terminals"
+         version="1.1.0.v201106081330-771Bg9uD6I4AB9LEHNV3552"
+         search-location="both"/>
+
+   <plugin
+         id="org.eclipse.rse"
+         download-size="7"
+         install-size="8"
+         version="3.3.0.v201101042155"
+         unpack="false"/>
+
+</feature>
