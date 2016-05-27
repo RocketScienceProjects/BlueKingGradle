@@ -80,13 +80,13 @@
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>ink-releases</id>
+			<id>ny-releases</id>
 			<name>Local nexus server plugin</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 			<layout>default</layout>
 		</pluginRepository>
 		<pluginRepository>
-			<id>ink-snapshots</id>
+			<id>ny-snapshots</id>
 			<name>Internal Nexus snapshot Server</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 			<layout>default</layout>
@@ -94,28 +94,28 @@
 	</pluginRepositories>
 	<distributionManagement>
 		<snapshotRepository>
-			<id>ink-snapshots</id>
+			<id>ny-snapshots</id>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
-			<id>ink-releases</id>
+			<id>ny-releases</id>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>
 	<repositories>
 		<repository>
-			<id>ink-nexus</id>
+			<id>ny-nexus</id>
 			<name>Internal Nexus Server</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 		</repository>
 		<repository>
-			<id>ink-snapshots</id>
+			<id>ny-snapshots</id>
 			<name>Internal
 		Nexus snapshot Server</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
 		</repository>
 		<repository>
-			<id>ink-releases</id>
+			<id>ny-releases</id>
 			<name>Internal Nexus Releases Server</name>
 			<url>http://ec2-54-213-106-231.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/releases</url>
 			<releases>
