@@ -7,6 +7,6 @@ node('master') {
 
   stage 'build'
     def mvnHome = tool 'M3'
-    bat 'mvn -B verify'
+    bat 'mvn clean deploy'
 
 }
