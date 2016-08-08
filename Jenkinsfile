@@ -7,7 +7,12 @@ node('master') {
 
   stage 'build'
     bat 'mvn clean deploy'
-
-  //stage 'Cut_Release'
+  
+  //Adding the below to test the release goal
+  stage 'Cut_Release'
+    def pom = readMavenPom file: 'pom.xml'
+    def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
+    
+    bat 'mvn -DreleaseVersion=${version} -DdevelopmentVersion=${pom.version} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
 
 }
