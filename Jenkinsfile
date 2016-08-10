@@ -20,7 +20,7 @@ node('master') {
     bat 'mvn -DreleaseVersion=${version} -DdevelopmentVersion=${pom.version} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B'
     
   stage 'publish git tag'
-    bat 'git push ${pom.artifactId}-${version}'
+    bat 'git push master ${pom.artifactId}-${version}'
     bat 'echo "This is what was pushed have for me"'
     println ("${pom.artifactId}-${version}")
     
