@@ -18,8 +18,8 @@ node('master') {
     println ("$version")
     
     //test if the parameters are being imported at the run time
-    println ("$releaseVersion")
-    println ("$developmentVersion")
+    println ("${releaseVersion}")
+    println ("${developmentVersion}")
     
     bat 'mvn -DreleaseVersion="${releaseVersion}" -DdevelopmentVersion="${developmentVersion}" -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B'
     
