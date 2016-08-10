@@ -10,25 +10,15 @@ node('master') {
   
   //Adding the below to test the release goal
   stage 'Cut_Release'
-    def pom = readMavenPom file: 'pom.xml'
-    bat 'echo "This is what the pom have for me"'
-    println ("$pom")
-    def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
-    bat 'echo "This is what the version have for me"'
-    println ("$version")
-    
+    //def pom = readMavenPom file: 'pom.xml'
+    //def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
     //test if the parameters are being imported at the run time
     //def releaseVersion = ${releaseVersion}
     //def developmentVersion = ${developmentVersion}
-    
-    
     bat "mvn -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${developmentVersion} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
     
-  //stage 'publish git tag'
-    //bat 'echo "This is what was pushed have for me"'
-    //println ("${pom.artifactId}-${version}")
-    
-    //bat 'git push master ${pom.artifactId}-${version}'
+  stage 'publish git tag'
+    bat 'git push origin ${pom.artifactId}-${releaseVersion}'
 
     
 
