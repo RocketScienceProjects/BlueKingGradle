@@ -21,7 +21,7 @@ node('master') {
      
   stage 'publish git tag'
     //bat "git push origin ${pom.artifactId}-${releaseVersion}"
-    bat "git push ${pom.artifactId}-${version}"
+    bat "git push origin ${pom.artifactId}-${version}"
     
 
 }
