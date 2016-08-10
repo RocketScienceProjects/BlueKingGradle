@@ -13,6 +13,6 @@ node('master') {
     def pom = readMavenPom file: 'pom.xml'
     def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
     
-    bat 'mvn -DreleaseVersion=14.1.1 -DdevelopmentVersion=14.1.2-SNAPSHOT -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
+    bat 'mvn -DreleaseVersion=14.1.1 -DdevelopmentVersion=14.1.2-SNAPSHOT -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B'
 
 }
