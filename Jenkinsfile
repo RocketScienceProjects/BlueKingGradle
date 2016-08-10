@@ -21,7 +21,7 @@ node('master') {
     println ("${releaseVersion}")
     println ("${developmentVersion}")
     
-    bat 'mvn -DreleaseVersion="${releaseVersion}" -DdevelopmentVersion="${developmentVersion}" -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B'
+    bat 'mvn -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${developmentVersion} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B'
     
   //stage 'publish git tag'
     //bat 'echo "This is what was pushed have for me"'
