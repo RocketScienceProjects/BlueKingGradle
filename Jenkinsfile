@@ -15,8 +15,10 @@ node('master') {
     //test if the parameters are being imported at the run time
     //def releaseVersion = ${releaseVersion}
     //def developmentVersion = ${developmentVersion}
-    bat "mvn -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${developmentVersion} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
+    bat "mvn -B -DdevelopmentVersion=${developmentVersion} -DreleaseVersion=${releaseVersion} -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform"
     
+    
+     
   stage 'publish git tag'
     bat "git push origin ${pom.artifactId}-${releaseVersion}"
 
