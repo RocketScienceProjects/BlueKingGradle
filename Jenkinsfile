@@ -10,7 +10,7 @@ node('master') {
   
   //Adding the below to test the release goal
   stage 'Cut_Release'
-    //def pom = readMavenPom file: 'pom.xml'
+    def pom = readMavenPom file: 'pom.xml'
     //def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
     //test if the parameters are being imported at the run time
     //def releaseVersion = ${releaseVersion}
