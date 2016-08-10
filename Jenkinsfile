@@ -17,13 +17,17 @@ node('master') {
     bat 'echo "This is what the version have for me"'
     println ("$version")
     
-    bat 'mvn -DreleaseVersion=${version} -DdevelopmentVersion=${pom.version} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B'
+    //test if the parameters are being imported at the run time
+    println ("$releaseVersion")
+    println ("$developmentVersion")
     
-  stage 'publish git tag'
-    bat 'echo "This is what was pushed have for me"'
-    println ("${pom.artifactId}-${version}")
+    bat 'mvn -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${developmentVersion} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B'
     
-    bat 'git push master ${pom.artifactId}-${version}'
+  //stage 'publish git tag'
+    //bat 'echo "This is what was pushed have for me"'
+    //println ("${pom.artifactId}-${version}")
+    
+    //bat 'git push master ${pom.artifactId}-${version}'
 
     
 
