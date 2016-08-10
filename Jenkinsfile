@@ -18,8 +18,8 @@ node('master') {
     println ("$version")
     
     //test if the parameters are being imported at the run time
-    def releaseVersion = ${releaseVersion}
-    def developmentVersion = ${developmentVersion}
+    //def releaseVersion = ${releaseVersion}
+    //def developmentVersion = ${developmentVersion}
     
     
     bat "mvn -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${developmentVersion} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
