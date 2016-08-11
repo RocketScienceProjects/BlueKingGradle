@@ -12,7 +12,7 @@ node('master') {
    //this phase is added to execute prior to performing release
    mvn clean test
    //archieve the junit test result
-   step([$class: 'JunitResultArchiver', allowEmptyResults: true, testResults: .\target\surefire-reports\*.xml])
+   step([$class: 'JunitResultArchiver', allowEmptyResults: true, testResults: ".\\target\\surefire-reports\\*.xml"])
    
   
   //Adding the below to test the release goal
