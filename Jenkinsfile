@@ -7,6 +7,13 @@ node('master') {
 
  // stage 'build'
    // bat 'mvn clean deploy'
+   
+  stage 'Junit Test & Archieving Result'
+   //this phase is added to execute prior to performing release
+   mvn clean test
+   //archieve the junit test result
+   step([$class: 'JunitResultArchiver', allowEmptyResults: true, testResults: .\target\surefire-reports\*.xml])
+   
   
   //Adding the below to test the release goal
   stage 'Cut_Release'
@@ -16,7 +23,7 @@ node('master') {
     //def releaseVersion = ${releaseVersion}
     //def developmentVersion = ${developmentVersion}
     //bat "mvn -B -DdevelopmentVersion=${developmentVersion} -DreleaseVersion=${releaseVersion} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform"
-    bat "mvn test -DreleaseVersion=${version} -DdevelopmentVersion=${pom.version} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
+    bat "mvn -DreleaseVersion=${version} -DdevelopmentVersion=${pom.version} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
     input 'Publish?'
      
   stage 'publish git tag'
