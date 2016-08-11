@@ -16,6 +16,6 @@ public class BlueKingHelloWorldTest {
 	public void HelloWorldTest(){
 		BluekingHelloWorld bluekingHelloWorld = new BluekingHelloWorld();
 		ModelAndView modelAndView = bluekingHelloWorld.helloWorld();
-		Assert.assertEquals("welcome1", modelAndView.getViewName());
+		Assert.assertEquals("welcome", modelAndView.getViewName());
 	}
 }
