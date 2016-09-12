@@ -6,7 +6,7 @@
   <packaging>war</packaging>
   <dependencies>
 		<dependency>
-			<groupId>org.springframework</groupId>
+			<groupId>org.springframework..</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>4.1.1.RELEASE</version>
 		</dependency>
