@@ -6,7 +6,7 @@
   <packaging>war</packaging>
   <dependencies>
 		<dependency>
-			<groupId>org.springframework..</groupId>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>4.1.1.RELEASE</version>
 		</dependency>
@@ -107,7 +107,7 @@
 		<pluginRepository>
 			<id>ny-releases</id>
 			<name>Local nexus server plugin</name>
-			<url>http://ec2-54-244-28-213.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
+			<url>http://eec2-54-244-28-213.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 			<layout>default</layout>
 		</pluginRepository>
 		<pluginRepository>
