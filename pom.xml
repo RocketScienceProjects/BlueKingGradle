@@ -75,7 +75,7 @@
             </plugin>
 
 			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
+				<artifactId>maven-war-plugin11111</artifactId>
 				<version>2.4</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
@@ -107,7 +107,7 @@
 		<pluginRepository>
 			<id>ny-releases</id>
 			<name>Local nexus server plugin</name>
-			<url>http://eec2-54-244-28-213.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
+			<url>http://ec2-54-244-28-213.us-west-2.compute.amazonaws.com:8081/nexus/content/groups/public</url>
 			<layout>default</layout>
 		</pluginRepository>
 		<pluginRepository>
