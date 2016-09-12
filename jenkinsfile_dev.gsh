@@ -1,3 +1,19 @@
+def notifyFailed() {
+  /*slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+
+  hipchatSend (color: 'RED', notify: true,
+      message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})"
+    )
+  */
+
+  emailext (
+      subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+      body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+        <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+      recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+    )
+}
+
 node('master'){
 
     try{
@@ -10,11 +26,13 @@ node('master'){
      stage name: 'Publish Test Data'
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
     }
-    catch(err){
+    catch(e){
      stage name: 'Send Notification'
-        mail to: 'nirish.okram@gmail.com',
-        subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",
-        body: "Please go to ${env.BUILD_URL} and verify the build"
         currentBuild.result = 'FAILURE'
+        //mail to: 'nirish.okram@gmail.com',
+        //subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",
+        //body: "Please go to ${env.BUILD_URL} and verify the build"
+        notifyFailed()
+        throw e
     }
 }
