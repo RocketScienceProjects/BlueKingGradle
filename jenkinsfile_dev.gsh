@@ -6,7 +6,7 @@ def notifyFailed() {
     )
   */
 
-  emailext (
+  emailext (to: "${EMAIL}",
       subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
         <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
@@ -25,6 +25,8 @@ node('master'){
         bat "${mvnHome}/bin/mvn -B clean deploy"
      stage name: 'Publish Test Data'
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+     //stage name: 'Publish Coverage Report'
+        //step([$class: 'JacocoPublisher', sourcePattern: 'src/com/blueking/controller/*.java'])
     }
     catch(e){
      stage name: 'Send Notification'
