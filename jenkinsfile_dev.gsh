@@ -31,10 +31,12 @@ node('master'){
     catch(e){
      stage name: 'Send Notification'
         currentBuild.result = 'FAILURE'
-        //mail to: 'nirish.okram@gmail.com',
+        /*
+        mail to: 'nirish.okram@gmail.com',
         //subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",
-        //body: "Please go to ${env.BUILD_URL} and verify the build"
+        body: "Please go to ${env.BUILD_URL} and verify the build"
+        */
         notifyFailed()
-        throw e
+        //throw e
     }
 }
