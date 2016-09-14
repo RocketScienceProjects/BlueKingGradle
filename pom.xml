@@ -3,8 +3,8 @@
   <groupId>BlueKing</groupId>
   <artifactId>BlueKing</artifactId>
   <version>16.0.1-SNAPSHOT</version>
-  <packaging>failL</packaging>
-  <dependencies>
+  <packaging>warr</packaging>
+   <dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
