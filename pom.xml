@@ -3,7 +3,7 @@
   <groupId>BlueKing</groupId>
   <artifactId>BlueKing</artifactId>
   <version>16.0.1-SNAPSHOT</version>
-  <packaging>fail</packaging>
+  <packaging>failL</packaging>
   <dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
