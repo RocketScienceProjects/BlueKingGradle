@@ -113,7 +113,7 @@
 		<pluginRepository>
 			<id>ny-snapshots</id>
 			<name>Internal Nexus snapshot Server</name>
-			<url>http://ec2-54-244-28-213.us-west-2.compute.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
 			<layout>default</layout>
 		</pluginRepository>
 	</pluginRepositories>
