@@ -31,6 +31,7 @@ node('Linux'){
 */
   stage name: 'Deploy To Lab', concurrency: 1
     def p =  sh 'pwd'
+    println p
     sh 'ls -al'
     def tomcatStatus = "$p/deploy.sh".execute().text  
 
