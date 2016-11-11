@@ -9,7 +9,7 @@ node('Linux'){
       doGenerateSubmoduleConfigurations: false,
       extensions: [], submoduleCfg: [],
       userRemoteConfigs: [[credentialsId: 'aa1c8452-6c57-40d4-814e-99ae1b74d1a9', url: 'git@github.com:RocketScienceProjects/BlueKing.git']]])
-
+/*
   stage name: 'Test & Scan', concurrency: 1
   parallel Test_Publish: {
     try{
@@ -28,7 +28,7 @@ node('Linux'){
       }
   },
     failFast: true
-
+*/
   stage name: 'Deploy To Lab', concurrency: 1
      def tomcatStatus = "./deploy.sh".execute().text  
 
