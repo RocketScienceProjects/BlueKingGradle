@@ -30,9 +30,9 @@ node('Linux'){
     failFast: true
 */
   stage name: 'Deploy To Lab', concurrency: 1
-    sh 'pwd'
+    def p =  sh 'pwd'
     sh 'ls -al'
-    def tomcatStatus = "%cd%/deploy.sh".execute().text  
+    def tomcatStatus = "$p/deploy.sh".execute().text  
 
 
   }
