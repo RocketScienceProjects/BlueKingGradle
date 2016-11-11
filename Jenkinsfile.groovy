@@ -8,7 +8,7 @@ node('Linux'){
       branches: [[name: '*/master']],
       doGenerateSubmoduleConfigurations: false,
       extensions: [], submoduleCfg: [],
-      userRemoteConfigs: [[credentialsId: 'aa1c8452-6c57-40d4-814e-99ae1b74d1a9', url: 'git@github.com:okram999/mavenquick.git']]])
+      userRemoteConfigs: [[credentialsId: 'aa1c8452-6c57-40d4-814e-99ae1b74d1a9', url: 'git@github.com:RocketScienceProjects/BlueKing.git']]])
 
   stage name: 'Test & Scan', concurrency: 1
   parallel Test_Publish: {
