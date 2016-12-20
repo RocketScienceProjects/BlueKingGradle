@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>BlueKing</groupId>
 	<artifactId>BlueKing</artifactId>
-	<version>16.0.1-SNAPSHOT</version>
+	<version>16.0.2</version>
 	<packaging>war</packaging>
 	
 	<dependencies>
@@ -107,7 +106,7 @@
 		<connection>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</connection>
 		<developerConnection>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</developerConnection>
 		<url>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</url>
-		<tag>BlueKing-11.0.1</tag>
+		<tag>BlueKing-16.0.2</tag>
 	</scm>
 
 	<pluginRepositories>
