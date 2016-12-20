@@ -1,6 +1,6 @@
 node('Linux'){
   try{
-      def mvnHome = tool 'Maven3'
+      def mvnHome = tool 'M3'
       env.PATH = "${mvnHome}/bin:${env.PATH}"
 
   stage name: 'Git Clone', concurrency: 1
