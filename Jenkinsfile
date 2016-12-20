@@ -1,6 +1,6 @@
 node('Linux'){
   try{
-      def mvnHome = tool 'Maven333'
+      def mvnHome = tool 'Maven3'
       env.PATH = "${mvnHome}/bin:${env.PATH}"
 
   stage name: 'Git Clone', concurrency: 1
@@ -8,8 +8,8 @@ node('Linux'){
       branches: [[name: '*/master']],
       doGenerateSubmoduleConfigurations: false,
       extensions: [], submoduleCfg: [],
-      userRemoteConfigs: [[credentialsId: 'aa1c8452-6c57-40d4-814e-99ae1b74d1a9', url: 'git@github.com:RocketScienceProjects/BlueKing.git']]])
-/*
+      userRemoteConfigs: [[credentialsId: 'jenks', url: 'git@github.com:RocketScienceProjects/BlueKing.git']]])
+
   stage name: 'Test & Scan', concurrency: 1
   parallel Test_Publish: {
     try{
@@ -28,7 +28,7 @@ node('Linux'){
       }
   },
     failFast: true
-*/
+
   stage name: 'Deploy To Lab', concurrency: 1
     def p =  pwd()
     println p

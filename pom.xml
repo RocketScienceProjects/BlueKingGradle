@@ -135,29 +135,5 @@
 			<url>http://192.168.55.55:8081/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>
-	
-	<!--<repositories> -->
-	<!--<repository> -->
-	<!--<id>ny-nexus</id> -->
-	<!--<name>Internal Nexus Server</name> -->
-	<!--<url>http://localhost:8081/nexus/content/groups/public</url> -->
-	<!--</repository> -->
-	<!--<repository> -->
-	<!--<id>ny-snapshots</id> -->
-	<!--<name>Internal -->
-	<!--Nexus snapshot Server</name> -->
-	<!--<url>http://localhost:8081/nexus/content/repositories/snapshots</url> -->
-	<!--</repository> -->
-	<!--<repository> -->
-	<!--<id>ny-releases</id> -->
-	<!--<name>Internal Nexus Releases Server</name> -->
-	<!--<url>http://localhost:8081/nexus/content/repositories/releases</url> -->
-	<!--<releases> -->
-	<!--<enabled>true</enabled> -->
-	<!--</releases> -->
-	<!--<snapshots> -->
-	<!--<enabled>true</enabled> -->
-	<!--</snapshots> -->
-	<!--</repository> -->
-	<!--</repositories> -->
+
 </project>
