@@ -107,24 +107,24 @@
         <pluginRepository>
             <id>ny-releases</id>
             <name>Local nexus server plugin</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://192.168.55.55:8081/nexus/repository/maven-releases/</url>
             <layout>default</layout>
         </pluginRepository>
         <pluginRepository>
             <id>ny-snapshots</id>
             <name>Internal Nexus snapshot Server</name>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.55.55:8081/nexus/repository/maven-snapshots/</url>
             <layout>default</layout>
         </pluginRepository>
     </pluginRepositories>
     <distributionManagement>
         <snapshotRepository>
             <id>ny-snapshots</id>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.55.55:8081/nexus/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>ny-releases</id>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://192.168.55.55:8081/nexus/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
     <!--<repositories>-->
